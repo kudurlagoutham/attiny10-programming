@@ -1,0 +1,18 @@
+To program attiny 10 using arduino uno you need to follow these steps:
+
+1. Get the arduino program  "TPI programmer for ATtiny4/5/9/10/20/40" from https://github.com/james-tate/Arduino-TPI-Programmer
+2. Download the code and upload it to arduino uno.
+3. give the connections as mentioned in the code.
+4. The baud rate ust be set to 9600 in serial monitor for the communication between uno and attiny10.
+5. verify that the communication between uno and attiny10 is established by giving simple command like 
+	D = dump memory. Displays all current memory on the chip
+6. Now prepare your hex file from atmel studio by selecting the attiny10 and debugging your code.
+7. copy the .hex file paste in your project folder.
+8. Now open your .hex file by using notepad and do not modify the .hex file.
+9. Its time to copy the contents of .hex file and program the attiny10.
+10. enter command P and paste .hex file content in the command space as input to the arduino uno.
+11. Now arduino writes the raw data to attiny10 by bitbanging and then voila you get success message.
+12. If there are any missing or loose connections. Resolve those and try again.
+13. As long as the vcc connected to 5v and reset connected to arduino the attijny10 will remain in programming mode.
+14. Now you can use the attiny10 by supplying it with 3.3v and giving the code specific connections.
+15. There are other commands available for you to fiddle with.
